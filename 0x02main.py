@@ -1,7 +1,14 @@
-name = "William"
-age = 20
-course = "computer science"
+name = "Alice"
+age = 25
+hobby = "painting"
 
-print("Name:", name)
-print("Age:", age)
-print("Course:", course)
+print(f"Hi, my name is {name}, I am {age} years old, and I love {hobby}!")
+
+
+
+
+name = "Bob"
+age = 30
+hobby = "coding"
+
+print(f"Hi, my name is {name}, I am {age} years old, and I love {hobby}!")
