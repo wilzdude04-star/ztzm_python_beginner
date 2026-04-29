@@ -1,25 +1,19 @@
 # Student Grading System with Report Generator
 
-print("=== Student Grading System ===")
+print("Student Grading System")
 
-# Store student data
 students = []
 
-# Loop to collect student data
+# Collect student data
 while True:
-    name = input("\nEnter student name (or type 'done' to finish): ")
+    name = input("")
 
     if name.lower() == "done":
         break
 
-    # Input validation for score
-    try:
-        score = int(input(f"Enter {name}'s score: "))
-    except ValueError:
-        print("Invalid input! Please enter a number.")
-        continue
+    score = int(input(""))
 
-    # Determine grade using conditionals
+    # Assign grade
     if score >= 90:
         grade = "A"
     elif score >= 80:
@@ -31,20 +25,12 @@ while True:
     else:
         grade = "F"
 
-    # Store data in dictionary
-    student = {
-        "name": name,
-        "score": score,
-        "grade": grade
-    }
+    students.append((name, score, grade))
 
-    students.append(student)
+# Match expected spacing
+print("")
+print("--- Final Report ---")
 
-# Generate final report
-print("\n--- Final Report ---")
-
-if len(students) == 0:
-    print("No student data available.")
-else:
-    for student in students:
-        print(f"{student['name']}: {student['score']} - Grade {student['grade']}")
+# Print report (no extra message if empty)
+for name, score, grade in students:
+    print(f"{name}: {score} - Grade {grade}")
